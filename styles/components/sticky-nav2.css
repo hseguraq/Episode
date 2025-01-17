@@ -1,0 +1,131 @@
+
+html {
+    scroll-behavior: smooth;
+}
+  /* Sticky Navigation */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 30px;
+    box-sizing: border-box;
+  }
+
+  .fixed {
+    position: fixed;
+    /* width: 100vw; */
+    z-index: 100000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 30px;
+}
+
+
+#sticky-nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* width: 100vw; */
+    padding-left: 20px; 
+    padding-right: 20px;
+  }
+
+
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    width: 188px;
+    height: 43px;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Ensures consistent spacing between items */
+  }
+  
+  .nav-links li {
+    text-align: center;
+    text-decoration: none;
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21.82px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #002856;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+
+  
+  .nav-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color:#002856;
+    margin: 5px auto 0;
+    transition: width 0.1s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%; /* Full width underline on hover */
+  }
+
+  #placeholder1, #placeholder2,
+  #placeholder3, #placeholder4 {
+      scroll-margin-top: 500px;
+      margin-bottom: 500px;
+      justify-self: left;
+  }
+  
+
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .nav-container {
+      flex-direction: column; /* Stack logo and navigation */
+      align-items: center;
+    }
+  
+    .logo {
+      margin-bottom: 10px; /* Add space below the logo */
+    }
+  
+    .nav-links {
+      justify-content: center; /* Center the links */
+      gap: 15px; /* Adjust spacing for smaller screens */
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 720px) {
+    section.sticky-nav {
+        display: none;
+    }
+
+  }
+  
+
+
+  

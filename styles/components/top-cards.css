@@ -1,0 +1,114 @@
+.cards-container {
+  display: flex;
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+  padding-top: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+
+
+}
+
+.card {
+    flex: 1 1 calc(33.33% - 20px); /* Three cards per row with space */
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    height: 419px; /* Adjust based on your design */
+    min-width: 300px; /* Ensures cards don't shrink too much */
+    transition: transform 0.3s ease;
+    color: #FFFFFF;
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+    
+    
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 20px; /* Spacing from the bottom */
+    left: 20px;
+    padding: 10px;
+    max-width: calc(100% - 40px); /* Prevents overflow */
+    
+  }
+
+
+  .card-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+  }
+
+  .card-content p {
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#FFFFFF ;
+
+  }
+
+  .card-content a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#FFFFFF ;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+  
+  .card:nth-child(1) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../../assets/images/top-card1-large.jpeg'); 
+    background-size: cover;
+  }
+  
+  .card:nth-child(2) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../../assets/images/top-card2-large.jpeg'); 
+    background-size: cover;
+  }
+  
+  .card:nth-child(3) {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)), url('../../assets/images/top-card3-large.jpeg'); 
+    background-size: cover;
+  }
+
+
+
+
+
+
+
+  @media (max-width: 1024px) {
+
+    .card-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards horizontally */
+      }
+    
+      .card {
+        flex: 1 1 70%; /* Full width for each card */
+        margin-bottom: 20px; /* Add spacing between rows */
+        margin-right: 3%;
+        margin-left: 3%;
+      }
+    
+    
+  }
+  
+@media (max-width: 720px) {
+
+    
+  }
